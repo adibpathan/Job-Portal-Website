@@ -15,13 +15,15 @@
 
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      external: ['react-icons'] // Add react-icons to external
-    }
-  }
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'), // This should point to your src directory
+    },
+  },
 });
+
 
