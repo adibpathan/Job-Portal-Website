@@ -18,12 +18,10 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'), // This should point to your src directory
+  build: {
+    rollupOptions: {
+      external: ['react-icons'],
     },
   },
 });
-
 
