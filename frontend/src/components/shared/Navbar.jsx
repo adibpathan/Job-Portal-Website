@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 // import { USER_API_END_POINT } from '@/utils/constant'
 import {USER_API_END_POINT} from '../../utils/constant'
-import { setUser } from '@/redux/authSlice'
+import { setUser } from '../../redux/authSlice'
 import { toast } from 'sonner'
 
 const Navbar = () => {
